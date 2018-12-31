@@ -19,9 +19,9 @@ dataset = pd.read_csv("data.csv")
 purpose_mean = dataset.groupby("purpose").mean()[["int_rate"]]
 
 # Plot 
-stack_bar_plot = purpose_mean.unstack().plot(kind='bar',title="Mean Intrest Rate Per Purpose",figsize=(8, 4))
-stack_bar_plot.set_xlabel(purpose_mean.index.name)
-stack_bar_plot.set_ylabel("mean(int_rate)")
+bar_plot = purpose_mean.unstack().plot(kind='bar',title="Mean Intrest Rate Per Purpose",figsize=(8, 4))
+bar_plot.set_xlabel(purpose_mean.index.name)
+bar_plot.set_ylabel("mean(int_rate)")
 #plt.show()
 
 if todo == "graph":
